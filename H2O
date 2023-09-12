@@ -1,1 +1,51 @@
+import processing.serial.*;
+import cc.arduino.*;
+
+Arduino arduino;
+
+void setup() {
+  size(400, 400);
+  arduino = new Arduino(this, Arduino.list()[1], 57600);
+}
+
+void draw() {
+  int y = arduino.analogRead(5);
+  float randomx = random(0,y);
+  float randomy = random(0,y);
+  background(192);
+  stroke(1);
+  fill(87, 92, 230);
+  System.out.println(y);
+  if(y>0){
+    fill(232, 44, 30);
+    ellipse(200,270,30,50);
+  }
+  // Adjust ellipse position based on randomx and randomy
+  ellipse(200 + randomx, 160 + randomy, 10, 10); 
+  
+  fill(217, 235, 26);
+  ellipse(205 + randomx, 165 + randomy, 5, 5);
+  ellipse(195 + randomx, 165 + randomy, 5, 5);
+  rect(195, 280, 10, 80);
+  rect(125, 220, 155, 5);
+  rect(125, 120, 5, 100);
+  rect(275, 120, 5, 100);
+  rect(125, 120, 150, 5);
+  
+//  leftButton = arduino.analogRead(1); 
+//  rightButton = arduino.analogRead(6); 
+  
+//  if(leftButton <= 50){
+//    randomx = random(0, 5); // Reduce the range to a smaller value
+//  } else {
+//    randomx = 0; // Reset randomx if button is not pressed
+//  }
+  
+//  if(rightButton >= 50){
+//    randomy = random(0, 5); // Reduce the range to a smaller value
+//  } else {
+//    randomy = 0; // Reset randomy if button is not pressed
+//  }
+}
+
 
