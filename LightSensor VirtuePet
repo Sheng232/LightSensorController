@@ -13,9 +13,10 @@ public void draw() {
   System.out.println(y);
     int changex = -70;
   int changey = 0;
+  translate(y, 0);
   fill(235, 150, 216);
-  ellipse(350 + changex+y, 310,200,100);
-  ellipse(250 + changex+y, 250 + changey,150,70);
+  ellipse(350 + changex, 310,200,100);
+  ellipse(250 + changex, 250 + changey,150,70);
   fill(10, 10, 10);
   //int x = 30;
   //ellipse(180+x+y,235,10,10);
@@ -26,23 +27,23 @@ public void draw() {
   }
  
   
-  ellipse(180+y,250,80+y,15-y);
+  ellipse(180,250,80+y,15-y);
   
   fill(8, 8, 8);
-  ellipse(180+10+y,250,5,10);
-  ellipse(180-10+y,250,5,10);
+  ellipse(180+10,250,5,10);
+  ellipse(180-10,250,5,10);
   fill(235,150,216);
-  arc(140+y,240,100,100,PI/2+1.8,PI+1);
-  arc(215+y,235,100,100,2*PI/3+3.4,2*PI);
+  arc(140,240,100,100,PI/2+1.8,PI+1);
+  arc(215,235,100,100,2*PI/3+3.4,2*PI);
   stroke(5);
   noFill();
-  arc(380+2*y,260,100,100,0,PI/2);
+  arc(380+2,260,100,100,0,PI/2);
   fill(111, 74, 125);
-  ellipse(280+40+y,350,40,15);
-  ellipse(280-40+y,350,40,15);
+  ellipse(280+40,350,40,15);
+  ellipse(280-40,350,40,15);
     fill(10, 10, 10);
   int x = 30;
-  ellipse(180+x+y,235,10,10);
-  ellipse(180-x+y,235,10,10);
+  ellipse(180+x,235,10,10);
+  ellipse(180-x,235,10,10);
 
 }
